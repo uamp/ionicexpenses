@@ -1,0 +1,7 @@
+{
+  "name": "ionicexpenses",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
