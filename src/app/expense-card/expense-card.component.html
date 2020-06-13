@@ -1,0 +1,20 @@
+	<ion-card>
+		<ion-card-header>
+			 <ion-card-title>{{ expense.timestamp }} </ion-card-title>
+		</ion-card-header>
+
+		<ion-card-content>
+			<ion-list lines="none">
+				<ion-item>
+					<ion-thumbnail slot="start">
+						<img [src]="expense.photo" *ngIf="expense.photo">
+					</ion-thumbnail>
+					<ion-label>
+						Amount: {{expense.amount}}<br>
+						Description: {{expense.description}}<br>
+						Status: {{expense.status}}
+					</ion-label>
+				</ion-item>
+			</ion-list>
+		</ion-card-content>
+	</ion-card>

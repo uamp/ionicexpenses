@@ -1,17 +1,12 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Archived Expenses
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Archived Expenses</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content>
+	<app-expense-card name="test" *ngFor="let expense of expenses" [expense]="expense"></app-expense-card>	
 </ion-content>
+
