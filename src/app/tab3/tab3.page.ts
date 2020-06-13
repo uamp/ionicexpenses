@@ -8,15 +8,19 @@ import { Expense } from '../expense';
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss']
 })
-export class Tab3Page  implements OnInit {
+export class Tab3Page implements OnInit {
 
   expenses: Expense[];
+  total: number;
 	
   constructor(private sanitizer: DomSanitizer, private expensesService: ExpensesService) {
   }
 
   ngOnInit() { 
 	  this.expenses = this.expensesService.getExpensesArchived();
+	  this.expenses.forEach( (expense) => {
+  			this.total+=expense.amount;   
+		});
 	}
 	
 }

@@ -10,7 +10,7 @@
 						<img [src]="expense.photo" *ngIf="expense.photo">
 					</ion-thumbnail>
 					<ion-label>
-						Amount: {{expense.amount}}<br>
+						Amount: £{{expense.amount | number:'1.2-2' }}<br>
 						Description: {{expense.description}}<br>
 						Status: {{expense.status}}
 					</ion-label>

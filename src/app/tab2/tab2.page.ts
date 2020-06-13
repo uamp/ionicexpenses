@@ -1,4 +1,4 @@
-import { Component, ViewChild , ElementRef, OnInit } from '@angular/core';
+import { Component, ViewChild , ElementRef, OnInit  } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ExpensesService} from '../expenses.service';
 import { Expense } from '../expense';
@@ -11,12 +11,18 @@ import { Expense } from '../expense';
 export class Tab2Page implements OnInit {
 
   expenses: Expense[];
+  total: number;
 	
   constructor(private sanitizer: DomSanitizer, private expensesService: ExpensesService) {
+
   }
 
-  ngOnInit() { 
+  ngOnInit() {  //this only runs once, so doesn't update!
 	  this.expenses = this.expensesService.getExpensesPending();
+	  this.expenses.forEach( (expense) => {
+  			this.total+=expense.amount;   
+		});
 	}
+	
 	
 }

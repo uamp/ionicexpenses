@@ -1,12 +1,12 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Archived Expenses
+      Archived Expenses - £{{ total | number:'1.2-2' }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-	<app-expense-card name="test" *ngFor="let expense of expenses" [expense]="expense"></app-expense-card>	
+	<app-expense-card *ngFor="let expense of expenses" [expense]="expense"></app-expense-card>	
 </ion-content>
 

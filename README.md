@@ -1,4 +1,4 @@
-# ionicexpenses
+# Ionic Expenses App (basic)
 by J Johnson
 
 Basic expenses example, front end only.  Built in Angular 2 & Ionic.

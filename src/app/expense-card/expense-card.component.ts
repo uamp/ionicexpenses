@@ -11,7 +11,6 @@ import { Expense } from '../expense';
 })
 export class ExpenseCardComponent implements OnInit {
   @Input() expense: Expense;
-  @Input()	  name: string;
   
 	
   constructor(private sanitizer: DomSanitizer) {
