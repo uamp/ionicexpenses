@@ -14,23 +14,23 @@ export class ExpensesService {
 	
   constructor() {
 	  this.expensesPending = [{
-		  timestamp: "P2135413501",
+		  timestamp: "P2135413501680",
 		  photo: null,
 		  amount: 11,
-		  description: "First",
+		  description: "Demo expense 1",
 		  status: "Pending"
 	  }];
 	this.expensesArchived = [{
-		  timestamp: "P897641963",
+		  timestamp: "P8976419633596",
 		  photo: null,
 		  amount: 13,
-		  description: "Third",
+		  description: "Demo expense 2",
 		status: "Paid"
 	  },{
-		  timestamp: "P102947888",
+		  timestamp: "P1029478883509",
 		  photo: null,
 		  amount: 14,
-		  description: "Fourth",
+		  description: "Demo expense 3",
 		  status: "Paid"
 	  }];
   	}

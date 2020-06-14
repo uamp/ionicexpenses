@@ -1,7 +1,10 @@
 <ion-item>
 	<ion-thumbnail slot="start">
-		<img [src]="expense.photo" *ngIf="expense.photo">
+		<img [src]="expense.photo" *ngIf="expense.photo; else elseBlock" >
+		<ng-template #elseBlock><img src="https://image.flaticon.com/icons/svg/1546/1546478.svg"></ng-template>
+		
 	</ion-thumbnail>
+	
 	<ion-label>
 		<h2>{{ expense.timestamp }}</h2>
 		<p>Amount: £{{expense.amount | number:'1.2-2' }}</p>
