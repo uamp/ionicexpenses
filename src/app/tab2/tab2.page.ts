@@ -11,18 +11,20 @@ import { Expense } from '../expense';
 export class Tab2Page implements OnInit {
 
   expenses: Expense[];
-  total: number;
 	
   constructor(private sanitizer: DomSanitizer, private expensesService: ExpensesService) {
-
   }
 
   ngOnInit() {  //this only runs once, so doesn't update!
 	  this.expenses = this.expensesService.getExpensesPending();
-	  this.expenses.forEach( (expense) => {
-  			this.total+=expense.amount;   
-		});
 	}
 	
+  getTotal(){
+	  let total =0;
+	  this.expenses.forEach( (expense) => {
+		total+=expense.amount;   
+	}); 
+	return total;
+  }
 	
 }

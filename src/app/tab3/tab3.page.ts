@@ -11,16 +11,21 @@ import { Expense } from '../expense';
 export class Tab3Page implements OnInit {
 
   expenses: Expense[];
-  total: number;
 	
   constructor(private sanitizer: DomSanitizer, private expensesService: ExpensesService) {
   }
 
   ngOnInit() { 
 	  this.expenses = this.expensesService.getExpensesArchived();
-	  this.expenses.forEach( (expense) => {
-  			this.total+=expense.amount;   
-		});
 	}
+	
+  getTotal(){
+  	let total =0;
+	this.expenses.forEach( (expense) => {
+		total+=expense.amount;   
+	}); 
+	return total;
+  }
+	
 	
 }
